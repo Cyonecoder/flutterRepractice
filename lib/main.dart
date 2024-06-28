@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/RecipeDetail.dart';
+import 'package:flutter_app/recipes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,18 +11,19 @@ class MyApp extends StatelessWidget {
 
   // This widget is the root of your application.
   @override
-  Widget build(BuildContext context) {ThemeData theme = ThemeData();
+  Widget build(BuildContext context) {
+    ThemeData theme = ThemeData();
     return MaterialApp(
-
       title: 'Flutter Demo',
       theme: theme.copyWith(
-      appBarTheme: AppBarTheme(centerTitle: true,backgroundColor: Colors.grey,titleTextStyle: TextStyle(color: Colors.white,fontSize: 20)),
-    colorScheme: ColorScheme.light(
-    primary: Colors.black87,
-    secondary: Colors.grey,
-
-
-    )),
+          appBarTheme: AppBarTheme(
+              centerTitle: true,
+              backgroundColor: Colors.grey,
+              titleTextStyle: TextStyle(color: Colors.white, fontSize: 20)),
+          colorScheme: ColorScheme.light(
+            primary: Colors.black87,
+            secondary: Colors.grey,
+          )),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
@@ -67,23 +70,53 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      appBar: AppBar(
-        // TRY THIS: Try changing the color here to a specific color (to
-        // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
-        // change color while the other colors stay the same.
+        appBar: AppBar(
+          // TRY THIS: Try changing the color here to a specific color (to
+          // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
+          // change color while the other colors stay the same.
 
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
-      body:
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-         Container(
+          // Here we take the value from the MyHomePage object that was created by
+          // the App.build method, and use it to set our appbar title.
+          title: Text(widget.title),
+        ),
+        body: ListView.builder(
+          itemCount: Recipe.samples.length,
+          itemBuilder: (BuildContext context, int index) {
+            return GestureDetector(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return Recipedetail(recipe: Recipe.samples[index]);
+                  }));
+                },
+                child: buildRecipeCard(Recipe.samples[index]));
+          },
+        )
 
+        // This trailing comma makes auto-formatting nicer for build methods.
+        );
+  }
 
-      ),
-     // This trailing comma makes auto-formatting nicer for build methods.
+  Widget buildRecipeCard(Recipe recipe) {
+    return Card(
+      elevation: 2,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+      child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Column(
+            children: [
+              Image(image: AssetImage(recipe.imageUrl)),
+              const SizedBox(
+                height: 14,
+              ),
+              Text(
+                recipe.label,
+                style: const TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w700,
+                    fontFamily: 'Palatino'),
+              )
+            ],
+          )),
     );
   }
 }
