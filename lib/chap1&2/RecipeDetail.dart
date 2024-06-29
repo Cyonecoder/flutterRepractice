@@ -1,7 +1,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app/recipes.dart';
+import 'package:flutter_app/chap1&2/recipes.dart';
 
 class Recipedetail extends StatefulWidget {
   final Recipe recipe;
