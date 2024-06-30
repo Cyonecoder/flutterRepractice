@@ -76,7 +76,7 @@ class FooderMoTheme {
 
       appBarTheme: const AppBarTheme(
         foregroundColor: Colors.white,
-        backgroundColor: Color(0xf5e5959),
+        backgroundColor: Color(0xf232121),
       ),
       floatingActionButtonTheme: const FloatingActionButtonThemeData(
         foregroundColor: Colors.white,
