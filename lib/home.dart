@@ -1,20 +1,11 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'card1.dart';
-import 'fooderMo_theme.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
 
-  static List<Widget> pages = <Widget>[
-    const Card1(),
-    Container(
-      color: Colors.green,
-    ),
-    Container(
-      color: Colors.blue,
-    ),
-  ];
 
   @override
   State<Home> createState() => _HomeState();
@@ -24,15 +15,14 @@ class _HomeState extends State<Home> {
   // Todo: add state variables and functions
   int _selectedIndex = 0;
 
+
   static List<Widget> pages = <Widget>[
+    const Card1(),
     Container(
-      color: Colors.red,
+      color: Colors.transparent,
     ),
     Container(
-      color: Colors.green,
-    ),
-    Container(
-      color: Colors.blue,
+      color: Colors.transparent,
     ),
   ];
 
@@ -45,6 +35,7 @@ class _HomeState extends State<Home> {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    ScreenUtil.init(context);
     return Scaffold(
       appBar: AppBar(
         title: Text(

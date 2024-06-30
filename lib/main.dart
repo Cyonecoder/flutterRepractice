@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/fooderMo_theme.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'home.dart';
 
-void main() {
+void main() async{
+  await ScreenUtil.ensureScreenSize();
   runApp(const FooderMo());
 }
 
