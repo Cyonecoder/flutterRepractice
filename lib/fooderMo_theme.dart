@@ -73,10 +73,10 @@ class FooderMoTheme {
   static ThemeData dark() {
     return ThemeData(
       brightness: Brightness.dark,
-
+      scaffoldBackgroundColor: const Color.fromRGBO(40, 33, 33, 1.0),
       appBarTheme: const AppBarTheme(
         foregroundColor: Colors.white,
-        backgroundColor: Color(0xf5e5959),
+        backgroundColor: Color.fromRGBO(12, 6, 6, 1.0),
       ),
       floatingActionButtonTheme: const FloatingActionButtonThemeData(
         foregroundColor: Colors.white,
