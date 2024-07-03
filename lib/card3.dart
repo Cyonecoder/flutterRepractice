@@ -16,7 +16,13 @@ class Card3 extends StatelessWidget {
         child: Stack(
           children: [
             Container(
-              color: Colors.black.withOpacity(.6),
+              decoration: BoxDecoration(
+                color: Colors.black.withOpacity(.6), 
+              borderRadius: BorderRadius.all(Radius.circular(16))
+              ),
+              // TODO ADD COLUMN TEXT AND ICONE
+              // TODO ADD CHIPS IN CENTER
+
             ),
           ],
         ),
