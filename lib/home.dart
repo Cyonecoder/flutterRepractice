@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_app/card2.dart';
+import 'package:flutter_app/screens/explore_screen.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'card1.dart';
 import 'card3.dart';
@@ -19,7 +20,7 @@ class _HomeState extends State<Home> {
 
 
   static List<Widget> pages = <Widget>[
-    const Card1(),
+     ExploreScreen(),
     const Card2(),
     const Card3()
   ];
