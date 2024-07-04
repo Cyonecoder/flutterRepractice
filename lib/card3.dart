@@ -13,7 +13,7 @@ class Card3 extends StatelessWidget {
         constraints: BoxConstraints.expand(width: 350.w, height: 450.h),
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/mag2.png'), fit: BoxFit.cover),
+                image: AssetImage('assets/magazine_pics/mag2.png'), fit: BoxFit.cover),
             borderRadius: BorderRadius.all(Radius.circular(16))),
         child: Stack(
           children: [
