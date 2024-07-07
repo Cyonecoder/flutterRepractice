@@ -1,4 +1,4 @@
-part of 'exploreRecipe.dart';
+part of 'explore_recipe.dart';
 class Instruction {
   String imageUrl;
   String description;
@@ -13,6 +13,6 @@ class Instruction {
     return Instruction(
         imageUrl: json['imageUrl'] ?? '',
         description: json['description'],
-        timesInMinutes: json['timesInMinutes'] ?? '');
+        timesInMinutes: json['timesInMinutes'] ?? 0);
   }
 }

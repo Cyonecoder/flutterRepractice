@@ -1,10 +1,9 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutter_app/components/card2.dart';
+
 import 'package:flutter_app/screens/explore_screen.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'components/card1.dart';
-import 'components/card3.dart';
+
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -21,8 +20,9 @@ class _HomeState extends State<Home> {
 
   static List<Widget> pages = <Widget>[
      ExploreScreen(),
-    const Card2(),
-    const Card3()
+    Container(color: Colors.blue),
+    Container(color: Colors.red),
+
   ];
 
   _onItemTapped(int index) {
@@ -34,7 +34,8 @@ class _HomeState extends State<Home> {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    ScreenUtil.init(context,designSize: Size(1080,2340));
+
+    ScreenUtil.init(context,designSize: const Size(1080,2340));
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -49,7 +50,7 @@ class _HomeState extends State<Home> {
         onTap: _onItemTapped,
         currentIndex: _selectedIndex,
         selectedItemColor: Theme.of(context).textSelectionTheme.selectionColor,
-        items: [
+        items: const [
           BottomNavigationBarItem(
               icon: Icon(Icons.card_giftcard), label: 'Card'),
           BottomNavigationBarItem(

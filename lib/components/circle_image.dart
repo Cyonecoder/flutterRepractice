@@ -10,7 +10,7 @@ class CircleImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return  CircleAvatar(
       backgroundColor: Colors.white,
-      radius: imageRadius!,
+      radius: imageRadius,
       child: CircleAvatar(
         radius: imageRadius-5,
         backgroundImage: imageProvider,

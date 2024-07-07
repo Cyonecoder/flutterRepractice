@@ -13,12 +13,14 @@ class ExploreScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
+
         future: mockService.getExploreData(),
         builder: (context, AsyncSnapshot<ExploreData> snapshot) {
-          final recipes = snapshot.data?.todayRecipe ?? [];
-         if(snapshot.connectionState == ConnectionState.done){ return Center(
+
+         if(snapshot.connectionState == ConnectionState.done){var recipes =  snapshot.data?.todayRecipe ?? [];
+         print('recipe1 '+recipes.toString()); return Center(
             child: Container(
-              child:TodayRecipeListview(recipes: recipes )
+              child:TodayRecipeListView(recipes: recipes )
             ),
           );}else{
 
