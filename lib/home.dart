@@ -1,10 +1,10 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutter_app/card2.dart';
+import 'package:flutter_app/components/card2.dart';
 import 'package:flutter_app/screens/explore_screen.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'card1.dart';
-import 'card3.dart';
+import 'components/card1.dart';
+import 'components/card3.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -34,7 +34,7 @@ class _HomeState extends State<Home> {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    ScreenUtil.init(context);
+    ScreenUtil.init(context,designSize: Size(1080,2340));
     return Scaffold(
       appBar: AppBar(
         title: Text(

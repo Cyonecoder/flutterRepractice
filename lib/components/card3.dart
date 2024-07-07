@@ -10,7 +10,7 @@ class Card3 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        constraints: BoxConstraints.expand(width: 350.w, height: 450.h),
+        constraints: BoxConstraints.expand(width: 1000.w, height: 1400.h),
         decoration: BoxDecoration(
             image: DecorationImage(
                 image: AssetImage('assets/magazine_pics/mag2.png'), fit: BoxFit.cover),
@@ -30,7 +30,7 @@ class Card3 extends StatelessWidget {
                   Icon(
                     Icons.book,
                     color: Colors.white,
-                    size: 40.sp,
+                    size: 100.sp,
                   ),
                   SizedBox(
                     height: 8,
@@ -65,7 +65,7 @@ class Card3 extends StatelessWidget {
                         side: BorderSide.none,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(
-                              20.0.r), // Adjust the radius as needed
+                             60.0.r), // Adjust the radius as needed
                           // This removes the white border
                         )),
                     Chip(
@@ -80,7 +80,7 @@ class Card3 extends StatelessWidget {
                         side: BorderSide.none,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(
-                              20.0.r), // Adjust the radius as needed
+                             60.0.r), // Adjust the radius as needed
                           // This removes the white border
                         )),
                     Chip(
@@ -92,7 +92,7 @@ class Card3 extends StatelessWidget {
                         side: BorderSide.none,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(
-                              20.0.r), // Adjust the radius as needed
+                             60.0.r), // Adjust the radius as needed
                           // This removes the white border
                         )),
                     Chip(
@@ -104,7 +104,7 @@ class Card3 extends StatelessWidget {
                         side: BorderSide.none,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(
-                              20.0.r), // Adjust the radius as needed
+                             60.0.r), // Adjust the radius as needed
                           // This removes the white border
                         )),
                     Chip(
@@ -116,7 +116,7 @@ class Card3 extends StatelessWidget {
                         side: BorderSide.none,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(
-                              20.0.r), // Adjust the radius as needed
+                             60.0.r), // Adjust the radius as needed
                           // This removes the white border
                         )),
                     Chip(
@@ -128,7 +128,7 @@ class Card3 extends StatelessWidget {
                         side: BorderSide.none,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(
-                              20.0.r), // Adjust the radius as needed
+                             60.0.r), // Adjust the radius as needed
                           // This removes the white border
                         )),
                     Chip(
@@ -140,7 +140,7 @@ class Card3 extends StatelessWidget {
                         side: BorderSide.none,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(
-                              20.0.r), // Adjust the radius as needed
+                             60.0.r), // Adjust the radius as needed
                           // This removes the white border
                         )),
                     Chip(
@@ -152,7 +152,7 @@ class Card3 extends StatelessWidget {
                         side: BorderSide.none,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(
-                              20.0.r), // Adjust the radius as needed
+                             60.0.r), // Adjust the radius as needed
                           // This removes the white border
                         ))
                   ],
