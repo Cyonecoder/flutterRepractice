@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/authorcard.dart';
+import 'package:flutter_app/components/authorcard.dart';
 import 'package:flutter_app/fooderMo_theme.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -11,8 +11,8 @@ class Card2 extends StatelessWidget {
     return Center(
       child: Container(
         constraints: BoxConstraints.expand(
-          width: 350.w,
-          height: 450.h,
+          width: 1000.w,
+          height: 1400.h,
         ),
         decoration: BoxDecoration(
           image: DecorationImage(

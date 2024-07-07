@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app/circle_image.dart';
+
 import 'package:flutter_app/fooderMo_theme.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import 'circle_image.dart';
 
 class Authorcard extends StatefulWidget {
   final String authorname;
@@ -33,10 +35,10 @@ class _AuthorcardState extends State<Authorcard> {
             children: [
               CircleImage(
                 imageProvider: widget.imageProvider,
-                imageRadius: 28.r,
+                imageRadius: 80.r,
               ),
               SizedBox(
-                width: 8.w,
+                width: 10.w,
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
