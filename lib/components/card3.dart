@@ -33,7 +33,7 @@ class Card3 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        constraints: BoxConstraints.expand(width: 800.w, height: 1400.h),
+        constraints: BoxConstraints.expand(width: 900.w, height: 1400.h),
         decoration: BoxDecoration(
             image: DecorationImage(
                 image: AssetImage(recipe.backgroundImage), fit: BoxFit.cover),
@@ -46,7 +46,7 @@ class Card3 extends StatelessWidget {
                   borderRadius: BorderRadius.all(Radius.circular(16))),
             ), // TODO ADD COLUMN TEXT AND ICON
             Container(
-              padding: EdgeInsets.all(16),
+              padding: EdgeInsets.all(8),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -69,14 +69,14 @@ class Card3 extends StatelessWidget {
               ),
             ),
             Center(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
+
+
                 child: Wrap(
                     alignment: WrapAlignment.start,
                     spacing: 12,
                     runSpacing: 12,
                     children: createTagChips()),
-              ),
+
             )
           ],
         ),

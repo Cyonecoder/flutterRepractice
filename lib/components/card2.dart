@@ -15,7 +15,7 @@ class Card2 extends StatelessWidget {
     return Center(
       child: Container(
         constraints: BoxConstraints.expand(
-          width: 800.w,
+          width: 900.w,
           height: 1400.h,
         ),
         decoration: BoxDecoration(
