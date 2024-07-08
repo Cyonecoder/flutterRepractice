@@ -1,4 +1,4 @@
-part of 'exploreRecipe.dart';
+part of 'explore_recipe.dart';
 
 class Ingredients {
   String title;

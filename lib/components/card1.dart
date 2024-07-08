@@ -1,56 +1,52 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/fooderMo_theme.dart';
+import '../models/models.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Card1 extends StatelessWidget {
-  const Card1({super.key});
+  final ExploreRecipe recipe;
 
-  final String category = 'Editor\'s Choice';
-  final String title = 'The Art of Dough';
-  final String description = 'learn to make the perfect bread.';
-  final String chef = 'Ray Khassal';
+   const Card1({super.key, required this.recipe});
+
+
 
   @override
   Widget build(BuildContext context) {
     return Center(
-      //todo: decorate container
+
       child: Container(
         padding: const EdgeInsets.all(16),
         constraints: BoxConstraints.expand(
-          width: 350.w *3,
-          height: 450.h*3,
+          width: 900.w,
+          height: 1400.h,
         ),
-        decoration: const BoxDecoration(
+        decoration:  BoxDecoration(
           image: DecorationImage(
-              image: AssetImage(
-                'assets/magazine_pics/mag1.png',
-              ),
-              fit: BoxFit.cover),
+              image: AssetImage('assets/magazine_pics/card_bread.jpg'), fit: BoxFit.cover),
           borderRadius: BorderRadius.all(
             Radius.circular(10),
           ),
         ),
-        //todo: add stack of text
         child: Stack(
           children: [
             Text(
-              category,
+              recipe.subtitle,
               style: FooderMoTheme.darkTextTheme.bodyLarge,
             ),
             Positioned(
-              child:
-                  Text(title, style: FooderMoTheme.darkTextTheme.headlineMedium),
+              child: Text(recipe.title,
+                  style: FooderMoTheme.darkTextTheme.headlineMedium),
               top: 20,
             ),
             Positioned(
-              child: Text(description,
+              child: Text(recipe.description,
                   style: FooderMoTheme.darkTextTheme.headlineSmall),
               bottom: 30,
               right: 0,
             ),
             Positioned(
-              child:
-                  Text(chef, style: FooderMoTheme.darkTextTheme.headlineSmall),
+              child: Text(recipe.authorName,
+                  style: FooderMoTheme.darkTextTheme.headlineSmall),
               bottom: 10,
               right: 0,
             ),
